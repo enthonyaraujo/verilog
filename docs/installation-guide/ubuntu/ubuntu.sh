@@ -72,12 +72,37 @@ fi
 echo "Movendo o OSS CAD Suite para /opt..."
 sudo mv oss-cad-suite /opt/
 
-echo "Configurando o PATH..."
+echo "Configurando o PATH global..."
 
-if ! grep -q '/opt/oss-cad-suite/bin' "$HOME/.bashrc"; then
-    echo 'export PATH="/opt/oss-cad-suite/bin:$PATH"' >> "$HOME/.bashrc"
+# Configuração global para Bash e shells compatíveis.
+sudo tee /etc/profile.d/oss-cad-suite.sh >/dev/null <<'EOF'
+export PATH="/opt/oss-cad-suite/bin:$PATH"
+EOF
+
+sudo chmod 644 /etc/profile.d/oss-cad-suite.sh
+
+# Configuração global para Fish, caso esteja instalado.
+if command -v fish >/dev/null 2>&1; then
+    sudo mkdir -p /etc/fish/conf.d
+
+    sudo tee /etc/fish/conf.d/oss-cad-suite.fish >/dev/null <<'EOF'
+fish_add_path /opt/oss-cad-suite/bin
+EOF
+
+    sudo chmod 644 /etc/fish/conf.d/oss-cad-suite.fish
 fi
 
+# Configuração global para Zsh, caso esteja instalado.
+if command -v zsh >/dev/null 2>&1; then
+    sudo mkdir -p /etc/zsh
+
+    if ! sudo grep -q '/opt/oss-cad-suite/bin' /etc/zsh/zshenv 2>/dev/null; then
+        echo 'export PATH="/opt/oss-cad-suite/bin:$PATH"' |
+            sudo tee -a /etc/zsh/zshenv >/dev/null
+    fi
+fi
+
+# Disponibiliza as ferramentas imediatamente dentro do script.
 export PATH="/opt/oss-cad-suite/bin:$PATH"
 
 echo "Testando instalação..."
@@ -108,8 +133,10 @@ echo "Permissões USB configuradas."
 echo
 echo "Instalação concluída!"
 echo
-echo "Execute no terminal atual:"
-echo "  source ~/.bashrc"
+echo "Feche e abra novamente o terminal para carregar o PATH."
+echo
+echo "No Bash ou Zsh, também é possível executar:"
+echo "  source /etc/profile.d/oss-cad-suite.sh"
 echo
 echo "Depois:"
 echo "  1. Encerre e entre novamente na sessão."
