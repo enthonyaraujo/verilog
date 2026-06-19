@@ -22,3 +22,9 @@ id
 lsusb
 openFPGALoader --detect
 ````
+ou
+```bash
+yosys -V
+nextpnr-himbaechel --version
+openFPGALoader --version
+```
