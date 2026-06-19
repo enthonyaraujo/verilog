@@ -23,9 +23,7 @@ Os circuitos são descritos por meio de:
 
 A partir do circuito apresentado:
 
-\[
-Z = \overline{A}B + (A + \overline{C}) + \overline{B}C
-\]
+$Z = \overline{A}B + (A + \overline{C}) + \overline{B}C$
 
 ### Tabela-verdade
 
