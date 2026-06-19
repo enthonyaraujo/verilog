@@ -2,6 +2,12 @@
 
 set -e
 
+if [ "$EUID" -eq 0 ]; then
+    echo "Execute este script sem sudo:"
+    echo "  ./fedora.sh"
+    exit 1
+fi
+
 echo "Configurando FPGA no Fedora..."
 
 echo "Atualizando o Fedora..."
