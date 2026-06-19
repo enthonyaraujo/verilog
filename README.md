@@ -1,4 +1,4 @@
-# Verilog HDL
+# Verilog 
 
 Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitais utilizando **Verilog HDL**.
 
