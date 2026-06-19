@@ -149,14 +149,6 @@ As duas saídas formam o resultado binário de 2 bits:
 
 $$ \text{resultado} = \{Cout,S\} $$
 
-Exemplos:
-
-- `0 + 0 + 0 = 00`;
-- `1 + 0 + 0 = 01`;
-- `1 + 1 + 0 = 10`;
-- `1 + 1 + 1 = 11`.
-
----
 
 # Problema 4 — Comparador de magnitude de 4 bits
 ![Problema 4](assets/problema4.png)
@@ -196,13 +188,3 @@ Uma tabela completa com todas as combinações de dois números de 4 bits teria:
 $$ 16 \times 16 = 256 $$
 
 combinações. A tabela funcional acima representa completamente o comportamento das três saídas, pois elas dependem apenas da relação entre `A` e `B`.
-
-## Exemplos
-
-| `A` | Valor de `A` | `B` | Valor de `B` | `A_maior_B` | `A_igual_B` | `A_menor_B` |
-|---|---:|---|---:|:---:|:---:|:---:|
-| `4'b1010` | 10 | `4'b0011` | 3 | 1 | 0 | 0 |
-| `4'b0101` | 5 | `4'b0101` | 5 | 0 | 1 | 0 |
-| `4'b0010` | 2 | `4'b0111` | 7 | 0 | 0 | 1 |
-
----
