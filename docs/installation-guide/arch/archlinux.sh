@@ -122,16 +122,21 @@ sudo udevadm trigger
 
 echo "Permissões USB configuradas."
 
+echo "Permissões USB configuradas."
+
 echo
 echo "Instalação concluída!"
 echo
-echo "Execute no terminal atual:"
-echo "  source ~/.bashrc"
+echo "Feche e abra novamente o terminal para carregar o PATH."
+echo
+echo "No Bash ou Zsh, também é possível executar:"
+echo "  source /etc/profile.d/oss-cad-suite.sh"
 echo
 echo "Depois:"
-echo "  1. Desconecte e conecte novamente a placa FPGA."
-echo "  2. Caso a placa não seja detectada, encerre e entre novamente na sessão."
+echo "  1. Encerre e entre novamente na sessão."
+echo "  2. Desconecte e conecte novamente a placa FPGA."
 echo
-echo "Teste com:"
+echo "Após entrar novamente, teste com:"
+echo "  id"
 echo "  lsusb"
 echo "  openFPGALoader --detect"
