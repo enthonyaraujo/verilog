@@ -1,0 +1,34 @@
+
+// ==========================================
+// Problema 3 — Comparador de magnitude de 1 bit
+// ==========================================
+
+
+// ------------------------------------------
+// Entradas
+// ------------------------------------------
+
+// Entrada a
+IO_LOC  "a" 44;
+IO_PORT "a" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Entrada b
+IO_LOC  "b" 13;
+IO_PORT "b" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ------------------------------------------
+// Saídas no LED RGB integrado
+// ------------------------------------------
+
+// Saída c: a < b — LED vermelho
+IO_LOC  "c" 9;
+IO_PORT "c" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// Saída d: a = b — LED verde
+IO_LOC  "d" 11;
+IO_PORT "d" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// Saída e: a > b — LED azul
+IO_LOC  "e" 10;
+IO_PORT "e" IO_TYPE=LVCMOS33 DRIVE=8;

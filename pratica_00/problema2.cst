@@ -1,0 +1,67 @@
+// ==========================================
+// Problema 2 — Multiplexador 2x1 de 4 bits
+// ==========================================
+
+
+// ------------------------------------------
+// Entrada a[3:0]
+// ------------------------------------------
+
+IO_LOC  "a[0]" 45;
+IO_PORT "a[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "a[1]" 46;
+IO_PORT "a[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "a[2]" 24;
+IO_PORT "a[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "a[3]" 23;
+IO_PORT "a[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ------------------------------------------
+// Entrada b[3:0]
+// ------------------------------------------
+
+IO_LOC  "b[0]" 22;
+IO_PORT "b[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "b[1]" 18;
+IO_PORT "b[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "b[2]" 17;
+IO_PORT "b[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "b[3]" 16;
+IO_PORT "b[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ------------------------------------------
+// Entrada de seleção
+// ------------------------------------------
+
+IO_LOC  "sel" 13;
+IO_PORT "sel" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ------------------------------------------
+// Saída y[3:0]
+// ------------------------------------------
+
+// LED vermelho integrado
+IO_LOC  "y[0]" 9;
+IO_PORT "y[0]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// LED verde integrado
+IO_LOC  "y[1]" 11;
+IO_PORT "y[1]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// LED azul integrado
+IO_LOC  "y[2]" 10;
+IO_PORT "y[2]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// Saída externa para o quarto bit
+IO_LOC  "y[3]" 15;
+IO_PORT "y[3]" IO_TYPE=LVCMOS33 DRIVE=8;
+

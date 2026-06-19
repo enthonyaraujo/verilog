@@ -1,0 +1,20 @@
+// ==========================================
+// Problema 1 — circuito estrutural
+// ==========================================
+
+// Entrada A
+IO_LOC  "A" 44;
+IO_PORT "A" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Entrada B
+IO_LOC  "B" 13;
+IO_PORT "B" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Entrada C
+IO_LOC  "C" 47;
+IO_PORT "C" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Saída Z — LED vermelho integrado
+IO_LOC  "Z" 9;
+IO_PORT "Z" IO_TYPE=LVCMOS33 DRIVE=8;
+

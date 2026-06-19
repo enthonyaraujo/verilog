@@ -1,6 +1,4 @@
-# Lista de Exercícios — Verilog Descrição Estrutural na FPGA Tang Nano
-
-Resoluções elaboradas de acordo com o material **Hardware Description Language (HDL)**, de Petrúcio Ricardo Tavares de Medeiros (UFERSA).
+# Lista de Exercícios — Verilog (Descrição Estrutural) na FPGA Tang Nano
 
 Os circuitos são descritos por meio de:
 
