@@ -23,7 +23,7 @@ Os circuitos são descritos por meio de:
 
 A partir do circuito apresentado:
 
-$Z = \overline{A}B + (A + \overline{C}) + \overline{B}C$
+$$Z = \overline{A}B + (A + \overline{C}) + \overline{B}C$$
 
 ### Tabela-verdade
 
@@ -53,16 +53,15 @@ O circuito possui:
 
 Quando `sel = 0`:
 
-$Y = A$
+$$Y = A$$
 
 Quando `sel = 1`:
 
-$Y = B$
+$$Y = B$$
 
 Para cada bit do barramento:
 
-
-$Y_i = A_i\overline{sel} + B_i sel$
+$$Y_i = A_i\overline{sel} + B_i sel$$
 
 com \(i = 0,1,2,3\).
 
@@ -108,15 +107,17 @@ O circuito compara duas entradas de 1 bit, `A` e `B`, e possui três saídas:
 
 #### Saída correspondente a \(A < B\)
 
-$C = \overline{A}B$
+$$C = \overline{A}B$$
 
 #### Saída correspondente a \(A = B\)
 
-$D = \overline{\overline{A}B + A\overline{B}}$
+$$
+D = \overline{\overline{A}B + A\overline{B}}
+$$
 
 #### Saída correspondente a \(A > B\)
 
-$E = A\overline{B}$
+$$E = A\overline{B}$$
 
 
 ### Tabela-verdade
