@@ -12,7 +12,7 @@ Esta seção reúne os guias de instalação e configuração para os sistemas o
 | [WSL](wsl/wsl.md)         | Configuração do Windows Subsystem for Linux (WSL 2), compartilhamento USB com usbipd-win e programação da FPGA pelo Linux.|
 | [Windows](windows/windows.md) | Instalação do OSS CAD Suite, configuração do ambiente e gravação da FPGA diretamente pelo Windows.                    |
 
-A versão do oss-cad-suite-build para cada script está definida para: 
+A versão do **[oss-cad-suite](https://github.com/yosyshq/oss-cad-suite-build)** para cada script está definida para: 
 ```bash
 RELEASE="2026-06-19"
 ARCHIVE="oss-cad-suite-linux-x64-20260619.tgz"
