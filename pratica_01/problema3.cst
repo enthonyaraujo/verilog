@@ -1,0 +1,29 @@
+// ==========================================
+// Entradas do somador completo
+// ==========================================
+
+// Entrada A
+IO_LOC  "A" 44;
+IO_PORT "A" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Entrada B
+IO_LOC  "B" 13;
+IO_PORT "B" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// Entrada do carry
+IO_LOC  "Cin" 47;
+IO_PORT "Cin" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ==========================================
+// Saídas do somador completo
+// ==========================================
+
+// Saída da soma
+IO_LOC  "S" 9;
+IO_PORT "S" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// Saída do carry
+IO_LOC  "Cout" 10;
+IO_PORT "Cout" IO_TYPE=LVCMOS33 DRIVE=8;
+

@@ -1,0 +1,62 @@
+// ==========================================
+// Entradas A[3:0] — pinos externos
+// ==========================================
+
+IO_LOC  "A[0]" 45;
+IO_PORT "A[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "A[1]" 46;
+IO_PORT "A[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "A[2]" 24;
+IO_PORT "A[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "A[3]" 23;
+IO_PORT "A[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ==========================================
+// Entradas B[3:0] — pinos externos
+// ==========================================
+
+IO_LOC  "B[0]" 22;
+IO_PORT "B[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "B[1]" 18;
+IO_PORT "B[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "B[2]" 17;
+IO_PORT "B[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "B[3]" 16;
+IO_PORT "B[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ==========================================
+// Seletor S — botão KEY_A
+// ==========================================
+
+IO_LOC  "S" 13;
+IO_PORT "S" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ==========================================
+// Saídas Y[3:0]
+// ==========================================
+
+// LED vermelho
+IO_LOC  "Y[0]" 9;
+IO_PORT "Y[0]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// LED verde
+IO_LOC  "Y[1]" 11;
+IO_PORT "Y[1]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// LED azul
+IO_LOC  "Y[2]" 10;
+IO_PORT "Y[2]" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// Quarto bit em pino externo
+IO_LOC  "Y[3]" 15;
+IO_PORT "Y[3]" IO_TYPE=LVCMOS33 DRIVE=8;
+

@@ -1,0 +1,50 @@
+// ==========================================
+// Entrada A[3:0]
+// ==========================================
+
+IO_LOC  "A[0]" 24;
+IO_PORT "A[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "A[1]" 23;
+IO_PORT "A[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "A[2]" 22;
+IO_PORT "A[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "A[3]" 20;
+IO_PORT "A[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ==========================================
+// Entrada B[3:0]
+// ==========================================
+
+IO_LOC  "B[0]" 19;
+IO_PORT "B[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "B[1]" 18;
+IO_PORT "B[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "B[2]" 17;
+IO_PORT "B[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+IO_LOC  "B[3]" 16;
+IO_PORT "B[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+
+// ==========================================
+// Saídas no LED RGB integrado
+// ==========================================
+
+// LED vermelho: A > B
+IO_LOC  "A_maior_B" 9;
+IO_PORT "A_maior_B" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// LED verde: A = B
+IO_LOC  "A_igual_B" 11;
+IO_PORT "A_igual_B" IO_TYPE=LVCMOS33 DRIVE=8;
+
+// LED azul: A < B
+IO_LOC  "A_menor_B" 10;
+IO_PORT "A_menor_B" IO_TYPE=LVCMOS33 DRIVE=8;
+
