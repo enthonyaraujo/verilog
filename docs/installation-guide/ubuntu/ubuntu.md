@@ -22,4 +22,3 @@ id
 lsusb
 openFPGALoader --detect
 ````
-nao terminado
