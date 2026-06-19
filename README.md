@@ -12,6 +12,8 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 
 ## Instalação
 
+- [Guia de instalação](installation-guide/README.md)
+
 ## Estrutura do repositório
 
 ```text
