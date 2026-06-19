@@ -10,6 +10,8 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 - Circuitos sequenciais;
 - Implementações em FPGA.
 
+## Instalação
+
 ## Estrutura do repositório
 
 ```text
@@ -25,7 +27,7 @@ verilog/
 └── README.md
 ```
 
-# Dependências
+## Dependências
 
 | Ferramenta | Função |
 |---|---|
