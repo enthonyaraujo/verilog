@@ -1,4 +1,3 @@
-```bash
 #!/usr/bin/env bash
 
 set -e
@@ -60,7 +59,6 @@ echo "Baixando $ARCHIVE..."
 wget -O "$ARCHIVE" \
   "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/$RELEASE/$ARCHIVE"
 
-# Evita misturar a nova extração com uma pasta antiga.
 rm -rf "$HOME/Downloads/oss-cad-suite"
 
 echo "Extraindo o OSS CAD Suite..."
@@ -80,7 +78,6 @@ if ! grep -q '/opt/oss-cad-suite/bin' "$HOME/.bashrc"; then
     echo 'export PATH="/opt/oss-cad-suite/bin:$PATH"' >> "$HOME/.bashrc"
 fi
 
-# Disponibiliza as ferramentas na execução atual do script.
 export PATH="/opt/oss-cad-suite/bin:$PATH"
 
 echo "Testando instalação..."
@@ -122,4 +119,3 @@ echo "Após entrar novamente, teste com:"
 echo "  id"
 echo "  lsusb"
 echo "  openFPGALoader --detect"
-```
