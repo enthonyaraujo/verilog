@@ -19,6 +19,8 @@ verilog/
 │   ├── practice-00/
 │   └── practice-01/
 ├── docs/
+│   ├── instalation-guide/
+│   └── notes/
 ├── LICENSE
 └── README.md
 ```
