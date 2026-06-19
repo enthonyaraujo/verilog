@@ -21,3 +21,13 @@ verilog/
 ├── docs/
 ├── LICENSE
 └── README.md
+```
+
+# Dependências
+
+| Ferramenta | Função |
+|---|---|
+| **[oss-cad-suite](https://github.com/yosyshq/oss-cad-suite-build)** | Síntese, posicionamento e roteamento, além da geração do bitstream usando Yosys e nextpnr |
+| **[openFPGALoader](https://github.com/trabucayre/openFPGALoader)** | Programação da FPGA via USB/JTAG |
+| **Drivers USB** | Comunicação com a placa FPGA |
+

@@ -36,7 +36,6 @@
     - [9.6 Estrutura `case`](#96-estrutura-case)
   - [10. Máquinas de estados finitos](#10-máquinas-de-estados-finitos)
   - [11. Descrição de memórias](#11-descrição-de-memórias)
-- [11. Dependências](#11-dependências)
 
 ---
 
@@ -801,12 +800,3 @@ Características desse exemplo:
 - a escrita é síncrona, pois ocorre na borda de subida do clock;
 - a escrita somente ocorre quando `w_en = 1`;
 - a leitura é assíncrona, pois utiliza uma atribuição contínua.
-
-# 11. Dependências
-
-| Ferramenta | Função |
-|---|---|
-| **oss-cad-suite** | Síntese, posicionamento e roteamento, além da geração do bitstream usando Yosys e nextpnr |
-| **openFPGALoader** | Programação da FPGA via USB/JTAG |
-| **Drivers USB** | Comunicação com a placa FPGA |
-
