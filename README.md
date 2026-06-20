@@ -10,7 +10,7 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 - Circuitos sequenciais;
 - Implementações em FPGA.
 
-## Instalação das ferramentas utilizadas:
+## Instalação das ferramentas utilizadas (Tang Nano):
 
 - [Guia de instalação](docs/installation-guide/README.md)
 
