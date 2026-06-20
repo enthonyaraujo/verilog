@@ -14,13 +14,13 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 
 - [Guia de instalação](docs/installation-guide/README.md)
 
-Definido para principais distros Linux: 
+Os scripts de instalação foram feitos para as principais distros Linux: 
 
 - [Fedora](docs/installation-guide/fedora/fedora.md)
 - [ArchLinux](docs/installation-guide/arch/arch.md)
 - [Ubuntu](docs/installation-guide/ubuntu/ubuntu.md)
 
-Para Windows
+Para Windows:
 
 - [WSL](docs/installation-guide/wsl/wsl.md)
 - Windows (ainda não feito)
