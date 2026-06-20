@@ -79,7 +79,11 @@ Se o comando ainda não for reconhecido, feche e abra o PowerShell novamente.
 
 ## 4 - Instalar o oss-cad-suite e openFPGALoader
 
-Para instalar o oss-cad-suite e openFPGALoader siga os passo a passo de alguma distro linux citada anteriormente (provavelmente a que vem instalada por padrão no wsl é o Ubuntu, mas você pode instalar o Archlinux e Fedora também) 
+Para instalar o oss-cad-suite e openFPGALoader siga os passo a passo de alguma distro linux citada anteriormente (provavelmente a que vem instalada por padrão no wsl é o [Ubuntu](docs/installation-guide/ubuntu/ubuntu.md), mas você pode instalar o [ArchLinux](docs/installation-guide/arch/arch.md) e [Fedora](docs/installation-guide/fedora/fedora.md) também) 
+
+- [Fedora](docs/installation-guide/fedora/fedora.md)
+- [ArchLinux](docs/installation-guide/arch/arch.md)
+- [Ubuntu](docs/installation-guide/ubuntu/ubuntu.md)
 
 ## 5. Identificar a Tang Nano no Windows
 
