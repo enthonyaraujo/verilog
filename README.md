@@ -19,7 +19,11 @@ Definido para principais distros:
 - [Fedora](docs/installation-guide/fedora/fedora.md)
 - [ArchLinux](docs/installation-guide/arch/arch.md)
 - [Ubuntu](docs/installation-guide/ubuntu/ubuntu.md)
+
+Para Windows
+
 - [WSL](docs/installation-guide/wsl/wsl.md)
+- Windows (ainda não feito)
 
 ## Estrutura do repositório
 
