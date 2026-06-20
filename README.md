@@ -10,7 +10,7 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 - Circuitos sequenciais;
 - Implementações em FPGA.
 
-## Instalação das dependências
+## Instalação das ferramentas utilizadas:
 
 - [Guia de instalação](docs/installation-guide/README.md)
 
@@ -40,7 +40,7 @@ verilog/
 └── README.md
 ```
 
-## Dependências
+## Ferramentas utilizadas
 
 | Ferramenta | Função |
 |---|---|
