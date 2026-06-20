@@ -23,7 +23,7 @@ Os scripts de instalação foram feitos para as principais distros Linux:
 Para Windows:
 
 - [WSL](docs/installation-guide/wsl/wsl.md)
-- Windows (ainda não feito)
+- Windows (ainda não feito - estou com preguiça)
 
 ## Estrutura do repositório
 
