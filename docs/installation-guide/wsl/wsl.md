@@ -77,152 +77,11 @@ Se o comando ainda não for reconhecido, feche e abra o PowerShell novamente.
 
 ---
 
-## 4. Preparar o Ubuntu/WSL
+## 4 - Instalar o oss-cad-suite e openFPGALoader
 
-No terminal do **Ubuntu/WSL**, instale as ferramentas auxiliares:
+Para instalar o oss-cad-suite e openFPGALoader siga os passo a passo de alguma distro linux citada anteriormente (provavelmente a que vem instalada por padrão no wsl é o ubuntu, mas você pode instalar o Archlinux e Fedora também) 
 
-```bash
-sudo apt update
-sudo apt install -y usbutils git cmake build-essential pkg-config \
-    libusb-1.0-0-dev libftdi1-dev libhidapi-dev libudev-dev zlib1g-dev
-```
-
-O comando `lsusb` é fornecido pelo pacote `usbutils`.
-
----
-
-## 5. Configurar o OSS CAD Suite no WSL
-
-Este guia considera que o OSS CAD Suite está em:
-
-```text
-~/tools/oss-cad-suite
-```
-
-Adicione o diretório `bin` ao `PATH`:
-
-```bash
-echo 'export PATH="$HOME/tools/oss-cad-suite/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-Confirme as ferramentas:
-
-```bash
-yosys -V
-nextpnr-himbaechel --version
-gowin_pack --help
-openFPGALoader --version
-```
-
-Nas versões atuais do OSS CAD Suite, o backend Gowin pode estar integrado ao:
-
-```text
-nextpnr-himbaechel
-```
-
-Por isso, a ausência do comando `nextpnr-gowin` não significa necessariamente que a instalação está incompleta.
-
-Confira de onde cada ferramenta está sendo executada:
-
-```bash
-which yosys
-which nextpnr-himbaechel
-which gowin_pack
-which openFPGALoader
-```
-
----
-
-## 6. Instalar o openFPGALoader manualmente no WSL
-
-Esta etapa é necessária somente quando o `openFPGALoader` ainda não estiver instalado ou quando for desejada uma versão compilada diretamente do repositório.
-
-```bash
-mkdir -p ~/tools
-cd ~/tools
-
-git clone https://github.com/trabucayre/openFPGALoader.git
-cd openFPGALoader
-
-mkdir -p build
-cd build
-
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j"$(nproc)"
-sudo make install
-sudo ldconfig
-```
-
-Teste:
-
-```bash
-openFPGALoader --version
-```
-
-Não execute a compilação com `sudo make`. Use `sudo` apenas na instalação:
-
-```bash
-sudo make install
-```
-
----
-
-## 7. Instalar as regras udev do openFPGALoader
-
-As regras udev permitem que o usuário comum acesse a interface USB sem executar o gravador como `root`.
-
-Execute no **Ubuntu/WSL**:
-
-```bash
-sudo cp ~/tools/openFPGALoader/99-openfpgaloader.rules \
-    /etc/udev/rules.d/99-openfpgaloader.rules
-```
-
-Recarregue as regras:
-
-```bash
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-```
-
-Se o WSL informar que o serviço udev não está disponível:
-
-```bash
-sudo service udev restart
-```
-
-Adicione o usuário ao grupo `plugdev`:
-
-```bash
-sudo usermod -aG plugdev "$USER"
-```
-
-Opcionalmente, adicione também ao grupo `dialout`:
-
-```bash
-sudo usermod -aG dialout "$USER"
-```
-
-Atualize a sessão:
-
-```bash
-newgrp plugdev
-```
-
-Ou encerre o WSL pelo PowerShell:
-
-```powershell
-wsl --shutdown
-```
-
-Depois abra novamente o Ubuntu.
-
-> As regras udev devem estar instaladas antes de anexar a placa ao WSL.
-
----
-
-## 8. Identificar a Tang Nano no Windows
+## 5. Identificar a Tang Nano no Windows
 
 Conecte a Tang Nano ao computador.
 
@@ -259,9 +118,9 @@ Digite somente o comando.
 
 ---
 
-## 9. Compartilhar a placa com o WSL
+## 6. Compartilhar a placa com o WSL
 
-### 9.1 Compartilhamento inicial — executado uma única vez
+### 6.1 Compartilhamento inicial — executado uma única vez
 
 No **PowerShell como administrador**, substitua `1-1` pelo BUSID real:
 
@@ -289,7 +148,7 @@ Shared
 
 O `bind` é persistente e normalmente não precisa ser repetido após reinicializações.
 
-### 9.2 Anexar a placa ao WSL
+### 6.2 Anexar a placa ao WSL
 
 Depois do `bind`, o `attach` não precisa ser executado como administrador.
 
@@ -315,7 +174,7 @@ Se o PowerShell mostrar `>>`, pressione `Ctrl+C`. Isso indica que ele está espe
 
 ---
 
-## 10. Confirmar o dispositivo dentro do WSL
+## 7. Confirmar o dispositivo dentro do WSL
 
 No terminal do **Ubuntu/WSL**, execute:
 
@@ -349,7 +208,7 @@ Se funcionar apenas com `sudo`, o repasse USB está correto e o problema está n
 
 ---
 
-## 11. Compilar o projeto
+## 8. Compilar o projeto
 
 Entre na pasta do projeto:
 
@@ -406,9 +265,9 @@ e a existência do arquivo `.fs`.
 
 ---
 
-## 12. Gravar a Tang Nano 1K
+## 9. Gravar a Tang Nano 1K
 
-### 12.1 Gravação temporária na SRAM
+### 9.1 Gravação temporária na SRAM
 
 A configuração é perdida quando a placa é desligada:
 
@@ -416,7 +275,7 @@ A configuração é perdida quando a placa é desligada:
 openFPGALoader -b tangnano1k nandgate.fs
 ```
 
-### 12.2 Gravação permanente na memória flash
+### 9.2 Gravação permanente na memória flash
 
 A configuração permanece após desligar e ligar a placa:
 
@@ -432,7 +291,7 @@ openFPGALoader -b tangnano1k --detect
 
 ---
 
-## 13. Rotina diária recomendada
+## 10. Rotina diária recomendada
 
 O `bind` normalmente é feito apenas na primeira configuração. Após reiniciar o computador, reiniciar o WSL ou desconectar a placa, normalmente basta executar novamente o `attach`.
 
@@ -464,7 +323,7 @@ openFPGALoader -b tangnano1k -f nandgate.fs
 
 ---
 
-## 14. Desconectar a placa do WSL
+## 11. Desconectar a placa do WSL
 
 Quando terminar, execute no **PowerShell**:
 
@@ -484,7 +343,7 @@ O estado continuará como `Shared`, portanto não é necessário repetir o `bind
 
 ---
 
-## 15. Script para anexar a FPGA ao WSL
+## 12. Script para anexar a FPGA ao WSL
 
 Crie no Windows um arquivo chamado:
 
@@ -527,7 +386,7 @@ O script considera que o dispositivo já passou pelo `usbipd bind`.
 
 ---
 
-## 16. Script para preparar o compartilhamento inicial
+## 13. Script para preparar o compartilhamento inicial
 
 Crie um arquivo chamado:
 
@@ -559,7 +418,7 @@ Este script normalmente precisa ser executado apenas uma vez por dispositivo.
 
 ---
 
-## 17. Erros frequentes
+## 14. Erros frequentes
 
 ### `unable to open ftdi device: -3 (device not found)`
 
@@ -749,7 +608,7 @@ make
 
 ---
 
-## 18. Verificação completa
+## 15. Verificação completa
 
 ### PowerShell
 
@@ -788,7 +647,7 @@ openFPGALoader -b tangnano1k nandgate.fs
 
 ---
 
-## 19. Resumo dos comandos principais
+## 16. Resumo dos comandos principais
 
 ### Primeira configuração
 
