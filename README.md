@@ -10,7 +10,7 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 - Circuitos sequenciais;
 - Implementações em FPGA.
 
-## Instalação
+## Instalação das dependências
 
 - [Guia de instalação](docs/installation-guide/README.md)
 
