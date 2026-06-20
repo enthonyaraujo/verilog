@@ -81,6 +81,7 @@ Se o comando ainda não for reconhecido, feche e abra o PowerShell novamente.
 
 Para instalar o oss-cad-suite e openFPGALoader siga os passo a passo de alguma distro linux citada anteriormente (provavelmente a que vem instalada por padrão no wsl é o [Ubuntu](https://ubuntu.com/wsl), mas você pode instalar o [ArchLinux](https://wiki.archlinux.org/title/Install_Arch_Linux_on_WSL) e [Fedora](https://docs.fedoraproject.org/en-US/cloud/wsl/) também) 
 
+Instalação do oss-cad-suite e openFPGALoader: 
 - [Fedora](docs/installation-guide/fedora/fedora.md)
 - [ArchLinux](docs/installation-guide/arch/arch.md)
 - [Ubuntu](docs/installation-guide/ubuntu/ubuntu.md)
