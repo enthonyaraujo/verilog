@@ -14,12 +14,12 @@ Repositório destinado ao estudo e desenvolvimento de sistemas/circuitos digitai
 
 - [Guia de instalação](docs/installation-guide/README.md)
 
-definido para principais distros: 
+Definido para principais distros: 
 
-- Fedora
-- Arch Linux
-- Ubuntu
-- WSL
+- [Fedora](docs/installation-guide/fedora/fedora.md)
+- [ArchLinux](docs/installation-guide/arch/arch.md)
+- [Ubuntu](docs/installation-guide/ubuntu/ubuntu.md)
+- [WSL](docs/installation-guide/wsl/wsl.md)
 
 ## Estrutura do repositório
 
